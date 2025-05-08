@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}SentimentAI - Advanced Sentiment Analysis{% endblock %}
+
+{% block content %}
+<div class="bg-gradient-to-r from-primary-600 to-indigo-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Understand Text Emotions with AI
+                </h1>
+                <p class="mt-6 text-xl max-w-lg">
+                    SentimentAI uses advanced natural language processing to analyze the sentiment of any text. Discover the emotions behind reviews, feedback, social media, and more.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="{{ url_for('test') }}" class="btn bg-white text-primary-600 hover:bg-gray-100 shadow-md">
+                        Try It Now
+                    </a>
+                    <a href="{{ url_for('about') }}" class="btn bg-primary-700 text-white hover:bg-primary-800 border border-primary-500">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-0 md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl flex items-center justify-center overflow-hidden">
+                        <div class="flex flex-col items-center space-y-4">
+                            <div class="flex space-x-6">
+                                <span class="text-6xl">😊</span>
+                                <span class="text-6xl">😐</span>
+                                <span class="text-6xl">😔</span>
+                            </div>
+                            <div class="h-1 w-32 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full w-2/3 bg-primary-500 rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Powerful Sentiment Analysis Features
+            </h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Our platform uses Groq's language models to deliver accurate and nuanced sentiment analysis for any text.
+            </p>
+        </div>
+
+        <div class="mt-16">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Feature 1 -->
+                <div class="card p-6">
+                    <div class="w-12 h-12 rounded-md bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">High-Speed Analysis</h3>
+                    <p class="mt-2 text-gray-600">
+                        Get instant sentiment analysis results powered by Groq's ultra-fast language models.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card p-6">
+                    <div class="w-12 h-12 rounded-md bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Advanced Accuracy</h3>
+                    <p class="mt-2 text-gray-600">
+                        Our model understands context and nuance to provide highly accurate sentiment analysis.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card p-6">
+                    <div class="w-12 h-12 rounded-md bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Detailed Insights</h3>
+                    <p class="mt-2 text-gray-600">
+                        Get not just positive/negative ratings but also confidence scores and emotional explanations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                How It Works
+            </h2>
+        </div>
+
+        <div class="mt-12 relative">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center">
+                <span class="px-3 bg-gray-50 text-gray-500">Simple 3-Step Process</span>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="card h-full p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">
+                                1
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium text-gray-900">Input Your Text</h3>
+                        </div>
+                        <p class="text-gray-600 flex-grow">
+                            Enter any text you want to analyze - customer reviews, social media posts, emails, or any written content.
+                        </p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                        <svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="card h-full p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">
+                                2
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium text-gray-900">AI Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 flex-grow">
+                            Our advanced AI, powered by Groq, processes the text and identifies the emotional tone and sentiment.
+                        </p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                        <svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div>
+                    <div class="card h-full p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">
+                                3
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium text-gray-900">Get Results</h3>
+                        </div>
+                        <p class="text-gray-600 flex-grow">
+                            Receive detailed sentiment analysis with classification (positive, negative, neutral), confidence score, and explanation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="{{ url_for('test') }}" class="btn btn-primary">
+                Try SentimentAI Now
+            </a>
+        </div>
+    </div>
+</div>
+
+{% if not current_user.is_authenticated %}
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Create an Account
+            </h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Register to save your analysis history and access more features.
+            </p>
+            <div class="mt-8">
+                <a href="{{ url_for('register') }}" class="btn btn-primary">
+                    Sign Up Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}About SentimentAI{% endblock %}
+
+{% block content %}
+<div class="bg-primary-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 class="text-3xl font-extrabold sm:text-4xl">About SentimentAI</h1>
+        <p class="mt-4 text-xl">Understanding the sentiment behind text with advanced AI.</p>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="prose lg:prose-lg mx-auto">
+        <h2>Our Mission</h2>
+        <p>
+            SentimentAI was developed as a final year project with the mission to make advanced sentiment analysis accessible to everyone. By leveraging state-of-the-art language models from Groq, we provide accurate and nuanced analysis of text sentiment, helping users understand the emotions behind written content.
+        </p>
+        
+        <h2>The Technology</h2>
+        <p>
+            Our sentiment analysis system is powered by Groq's large language models, which are trained on diverse datasets to understand human language patterns and emotional expressions. The system goes beyond simple positive/negative classification to provide:
+        </p>
+        
+        <ul>
+            <li><strong>Sentiment Classification</strong>: Categorizes text as positive, negative, or neutral</li>
+            <li><strong>Confidence Scores</strong>: Provides a numerical score indicating the strength of the sentiment</li>
+            <li><strong>Contextual Analysis</strong>: Understands nuance, sarcasm, and mixed sentiments in complex texts</li>
+            <li><strong>Explanation</strong>: Offers brief explanations for why the text was classified a certain way</li>
+        </ul>
+        
+        <h2>Applications</h2>
+        <p>
+            Sentiment analysis has numerous practical applications across different domains:
+        </p>
+        
+        <ul>
+            <li><strong>Business</strong>: Analyze customer feedback, reviews, and social media mentions</li>
+            <li><strong>Market Research</strong>: Gauge public opinion about products, services, or brands</li>
+            <li><strong>Social Media Monitoring</strong>: Track sentiment trends around specific topics</li>
+            <li><strong>Customer Service</strong>: Identify negative customer experiences for immediate response</li>
+            <li><strong>Content Analysis</strong>: Evaluate the emotional tone of articles, emails, or other written content</li>
+        </ul>
+        
+        <h2>About the Project</h2>
+        <p>
+            This application was developed as a final year project in Computer Science/Information Technology. It combines several key technologies:
+        </p>
+        
+        <ul>
+            <li><strong>Frontend</strong>: HTML, TailwindCSS, JavaScript</li>
+            <li><strong>Backend</strong>: Python, Flask</li>
+            <li><strong>Database</strong>: SQLite (SQLAlchemy ORM)</li>
+            <li><strong>AI Integration</strong>: Groq API</li>
+        </ul>
+        
+        <h2>How to Use</h2>
+        <p>
+            Using SentimentAI is simple:
+        </p>
+        
+        <ol>
+            <li>Head to the <a href="{{ url_for('test') }}">Test</a> page</li>
+            <li>Enter or paste the text you want to analyze</li>
+            <li>Click "Analyze" and receive instant sentiment analysis results</li>
+            <li>Create an account to save your analysis history</li>
+        </ol>
+        
+        <h2>Future Development</h2>
+        <p>
+            As this is an ongoing project, we plan to add more features in the future:
+        </p>
+        
+        <ul>
+            <li>Batch analysis for multiple texts</li>
+            <li>Advanced visualization of sentiment patterns</li>
+            <li>API access for integration with other applications</li>
+            <li>Multi-language support</li>
+            <li>Emotion detection (beyond simple sentiment)</li>
+        </ul>
+        
+        <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+            <h3 class="text-xl font-semibold">Get Started</h3>
+            <p class="mt-2">Try SentimentAI now and discover the emotions behind your text.</p>
+            <div class="mt-4">
+                <a href="{{ url_for('test') }}" class="btn btn-primary">Try It Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
