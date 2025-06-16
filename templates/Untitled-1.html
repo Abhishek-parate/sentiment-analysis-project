@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadoba Tiger Reserve - Wildlife Safari Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'safari-orange': '#FF7A00',
+                        'safari-green': '#2A5E32',
+                        'safari-beige': '#F9F5EB',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1926&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #FF7A00;
+            margin-top: 10px;
+        }
+        .safari-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .booking-card {
+            transition: all 0.3s ease;
+        }
+        .booking-card:hover {
+            transform: scale(1.03);
+        }
+        . {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        ..visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+  
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center pt-16">
+        <div class="container mx-auto px-4 text-center">
+           
+        </div>
+    </section>
+
+    <!-- Quick Stats Bar -->
+    <section class="bg-safari-green py-6 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div >
+                    <div class="text-3xl font-bold mb-2">625.40</div>
+                    <div class="text-sm uppercase tracking-wider">Square Kilometers</div>
+                </div>
+                <div  style="transition-delay: 0.2s;">
+                    <div class="text-3xl font-bold mb-2">88+</div>
+                    <div class="text-sm uppercase tracking-wider">Bengal Tigers</div>
+                </div>
+                <div  style="transition-delay: 0.4s;">
+                    <div class="text-3xl font-bold mb-2">280+</div>
+                    <div class="text-sm uppercase tracking-wider">Bird Species</div>
+                </div>
+                <div  style="transition-delay: 0.6s;">
+                    <div class="text-3xl font-bold mb-2">45+</div>
+                    <div class="text-sm uppercase tracking-wider">Mammal Species</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-safari-beige">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 ">
+                    <h2 class="text-3xl font-semibold text-safari-green mb-6 section-title">About Tadoba Tiger Reserve</h2>
+                    <p class="text-gray-700 mb-4">Tadoba Tiger Reserve, also known as Tadoba Andhari Tiger Reserve, is among Maharashtra's oldest and largest national parks. Established in 1955, the park was declared a Project Tiger Reserve in 1993.</p>
+                    <p class="text-gray-700 mb-6">Spanning over 625.40 square kilometers, this magnificent reserve is located in the Chandrapur district of Maharashtra, and derives its name from the local tribal God "Tadoba" and the Andhari River that flows through it.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-safari-orange text-xl mb-2"><i class="fas fa-tree"></i></div>
+                            <h3 class="font-medium text-safari-green">Rich Biodiversity</h3>
+                            <p class="text-sm text-gray-600">Home to diverse flora and fauna</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-safari-orange text-xl mb-2"><i class="fas fa-paw"></i></div>
+                            <h3 class="font-medium text-safari-green">Tiger Territory</h3>
+                            <p class="text-sm text-gray-600">High density of Bengal tigers</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-safari-orange text-xl mb-2"><i class="fas fa-mountain"></i></div>
+                            <h3 class="font-medium text-safari-green">Natural Landscape</h3>
+                            <p class="text-sm text-gray-600">Beautiful forests and meadows</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-safari-orange text-xl mb-2"><i class="fas fa-water"></i></div>
+                            <h3 class="font-medium text-safari-green">Water Bodies</h3>
+                            <p class="text-sm text-gray-600">Lakes and the Andhari River</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 " style="transition-delay: 0.3s;">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tadoba Landscape" class="rounded-lg shadow-lg w-full h-auto">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                <div class="md:w-1/2 ">
+                    <h2 class="text-3xl font-semibold text-safari-green mb-6 section-title">History of Tadoba</h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p>The rich cultural history of Tadoba dates back centuries. According to local legends, Taru was a village chief who was killed in a mythological encounter with a tiger. A shrine dedicated to Taru still exists in the dense forest.</p>
+                        <p>In 1955, an area of 116.54 sq km was declared as Tadoba National Park. Later in 1986, the adjacent Andhari Wildlife Sanctuary was integrated with it, and the combined reserve was named Tadoba Andhari Tiger Reserve in 1993.</p>
+                        <p>The reserve became a part of Project Tiger in 1993, which was a significant step in tiger conservation efforts in India. Over the years, Tadoba has grown to become one of India's premier tiger reserves with a remarkable success story in tiger conservation.</p>
+                    </div>
+                    
+                </div>
+                <div class="md:w-1/2 " style="transition-delay: 0.3s;">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Old Tadoba" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flora & Fauna Section -->
+    <section id="flora-fauna" class="py-16 bg-safari-beige">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-safari-green mb-12 text-center section-title mx-auto">Flora & Fauna</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Flora -->
+                <div >
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tadoba Flora" class="w-full h-full object-cover transition duration-700 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-safari-green mb-4">Flora</h3>
+                            <p class="text-gray-700 mb-6">Tadoba's diverse ecosystem supports a rich variety of plant life. The southern tropical dry deciduous forests primarily feature teak trees, alongside bamboo, ain, bija, dhauda, hald, salai, semal, and tendu trees. These forests create a perfect habitat for the reserve's wildlife.</p>
+                          
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fauna -->
+                <div  style="transition-delay: 0.3s;">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tadoba Tiger" class="w-full h-full object-cover transition duration-700 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-safari-green mb-4">Fauna</h3>
+                            <p class="text-gray-700 mb-6">Tadoba is home to approximately 88 tigers and a diverse range of wildlife. The reserve hosts numerous mammal species including leopards, sloth bears, gaur, nilgai, dhole, striped hyena, small Indian civet, jungle cats, sambar, and spotted deer. The park is also a paradise for bird watchers with over 280 species.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wildlife Gallery -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-safari-green mb-8 text-center">Wildlife Gallery</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg h-40 ">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tiger" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="overflow-hidden rounded-lg h-40 " style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Leopard" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="overflow-hidden rounded-lg h-40 " style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sloth Bear" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="overflow-hidden rounded-lg h-40 " style="transition-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Deer" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari Section -->
+    <section id="safari" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-safari-green mb-12 text-center section-title mx-auto">Jungle Safari Experience</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Safari Card 1 -->
+                <div class="safari-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 ">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jeep Safari" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Jeep Safari</h3>
+                        <p class="text-gray-700 mb-4">Experience the thrill of exploring Tadoba in an open jeep, guided by experienced naturalists who know the forest inside out.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">6 passengers per jeep</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">Professional naturalist guide</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">3-4 hour duration</span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                <!-- Safari Card 2 -->
+                <div class="safari-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 " style="transition-delay: 0.2s;">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Canter Safari" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Canter Safari</h3>
+                        <p class="text-gray-700 mb-4">Ideal for larger groups, the canter safari offers a shared experience with other wildlife enthusiasts in a larger vehicle.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">Up to 20 passengers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">Elevated viewing platform</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">3-hour safari experience</span>
+                            </li>
+                        </ul>
+                        
+                        </div>
+                </div>
+                
+                <!-- Safari Card 3 -->
+                <div class="safari-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 " style="transition-delay: 0.4s;">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1715088455637-6aca8cd2092f?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Walking Safari" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Photography Safari</h3>
+                        <p class="text-gray-700 mb-4">Specially designed for photography enthusiasts with expert guides who know the best spots for wildlife photography.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">4 photographers per vehicle</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">Photography specialist guide</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                <span class="text-sm">Full-day experience</span>
+                            </li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safari Types -->
+            <div class="bg-safari-beige rounded-xl p-8 shadow-lg ">
+                <h3 class="text-2xl font-semibold text-safari-green mb-6">Types of Jungle Safari in Tadoba</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">Morning Safari</h4>
+                                    <p class="text-gray-700">Starts at 6:00 AM and ends at 10:00 AM. Perfect for witnessing wildlife during their active morning hours.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">Afternoon Safari</h4>
+                                    <p class="text-gray-700">Starts at 3:00 PM and ends at 6:30 PM. Great for catching predators beginning their evening hunts.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">Full-Day Safari</h4>
+                                    <p class="text-gray-700">Available on special request. Spend the entire day exploring the reserve with breaks for meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-lg font-semibold text-safari-green mb-4">Safari Booking Tips</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                    <span>Book safaris at least 45-60 days in advance, especially during peak season (October to June).</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                    <span>Carry valid ID proof (Aadhar, Passport, etc.) as it's required for entry.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                    <span>Wear neutral-colored clothing (khaki, olive, brown) to blend with the surroundings.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                    <span>Pack essentials like sunscreen, hat, binoculars, camera, and water bottle.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-safari-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                    <span>Follow all rules and guidelines provided by your naturalist guide.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-safari-green mb-12 text-center section-title mx-auto">How to Reach Tadoba</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/2 ">
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120497.71797918193!2d79.33913189803431!3d20.16955782011096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0f9c988b86eb9%3A0xc8c8d9fab23ecaf2!2sTadoba%20Andhari%20Tiger%20Reserve!5e0!3m2!1sen!2sin!4v1649152565458!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 " style="transition-delay: 0.3s;">
+                    <div class="space-y-6">
+                        <div class="bg-safari-beige p-6 rounded-xl shadow-md">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">By Air</h4>
+                                    <p class="text-gray-700">The nearest airport is in Nagpur (Dr. Babasaheb Ambedkar International Airport), approximately 140 km from Tadoba. From Nagpur, you can hire a taxi or take a bus to reach Tadoba.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-safari-beige p-6 rounded-xl shadow-md">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">By Train</h4>
+                                    <p class="text-gray-700">Chandrapur Railway Station (35 km) is the closest major railway station to Tadoba. It is well-connected to major cities like Mumbai, Nagpur, and Hyderabad. From Chandrapur, taxis and buses are available to Tadoba.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-safari-beige p-6 rounded-xl shadow-md">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-safari-green">By Road</h4>
+                                    <p class="text-gray-700">Tadoba is well-connected by road. The nearest town is Chandrapur, about 35 km away. Regular buses operate from Chandrapur, Nagpur, and other nearby cities. You can also hire a private taxi for a more comfortable journey.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Distance Table -->
+            <div class="overflow-hidden rounded-xl shadow-lg ">
+                <div class="bg-safari-green text-white py-4 px-6">
+                    <h3 class="text-xl font-semibold">Distance Between Major Cities and Tadoba Tiger Reserve</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="bg-safari-beige">
+                            <tr>
+                                <th class="py-3 px-6 text-left text-sm font-semibold text-safari-green">From</th>
+                                <th class="py-3 px-6 text-left text-sm font-semibold text-safari-green">Distance (km)</th>
+                                <th class="py-3 px-6 text-left text-sm font-semibold text-safari-green">Approx. Travel Time</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Nagpur to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">140 km</td>
+                                <td class="py-3 px-6 text-sm">3-4 hours</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Mumbai to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">820 km</td>
+                                <td class="py-3 px-6 text-sm">16-18 hours</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Pune to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">730 km</td>
+                                <td class="py-3 px-6 text-sm">14-15 hours</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Hyderabad to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">380 km</td>
+                                <td class="py-3 px-6 text-sm">8-9 hours</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Chandrapur to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">35 km</td>
+                                <td class="py-3 px-6 text-sm">1 hour</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 text-sm">Delhi to Tadoba</td>
+                                <td class="py-3 px-6 text-sm">1100 km</td>
+                                <td class="py-3 px-6 text-sm">22-24 hours</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Season Section -->
+    <section class="py-16 bg-safari-beige">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-safari-green mb-12 text-center section-title mx-auto">Best Season to Visit</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Season Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden ">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518106663688-32bbe0a91ec1?q=80&w=1970&auto=format&fit=crop" alt="Winter Season" class="w-full h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-safari-orange text-white px-3 py-1 rounded-full text-sm font-medium">October - February</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Winter Season</h3>
+                        <p class="text-gray-700 mb-4">Winter is considered the best time to visit Tadoba. With pleasant daytime temperatures ranging from 25°C to 30°C, it's comfortable for safari activities. Wildlife is more active and visible as they gather around water sources.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span><i class="fas fa-thermometer-half mr-1"></i> 25°C - 30°C</span>
+                            <span><i class="fas fa-paw mr-1"></i> High wildlife activity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Season Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden " style="transition-delay: 0.2s;">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?q=80&w=1969&auto=format&fit=crop" alt="Summer Season" class="w-full h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-safari-orange text-white px-3 py-1 rounded-full text-sm font-medium">March - June</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Summer Season</h3>
+                        <p class="text-gray-700 mb-4">Summer brings high temperatures (35°C to 48°C), but it's also one of the best times for tiger sightings. As water sources dry up, animals gather around the remaining water bodies, increasing chances of spotting them.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span><i class="fas fa-thermometer-full mr-1"></i> 35°C - 48°C</span>
+                            <span><i class="fas fa-paw mr-1"></i> Excellent tiger sightings</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Season Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden " style="transition-delay: 0.4s;">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=1974&auto=format&fit=crop" alt="Monsoon Season" class="w-full h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-safari-orange text-white px-3 py-1 rounded-full text-sm font-medium">July - September</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-safari-green mb-3">Monsoon Season</h3>
+                        <p class="text-gray-700 mb-4">The park remains closed during the monsoon season from July to September. This period allows the forest to rejuvenate and the wildlife to breed without human interference.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span><i class="fas fa-cloud-rain mr-1"></i> Heavy rainfall</span>
+                            <span><i class="fas fa-ban mr-1"></i> Park closed to visitors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-6 rounded-xl shadow-lg ">
+                <h3 class="text-xl font-semibold text-safari-green mb-4">Our Recommendation</h3>
+                <p class="text-gray-700 mb-6">For the best wildlife viewing experience, we recommend visiting Tadoba between February and May. During this period, the vegetation is less dense, water sources are limited, and wildlife concentrates around water holes, making it easier to spot tigers and other animals. Early morning safaris (6:00 AM) offer the highest chances of tiger sightings.</p>
+                <div class="flex items-center">
+                    <div class="text-safari-orange mr-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-gray-700 italic">Book your safari at least 45-60 days in advance, especially if you're planning to visit during the peak season (March-May) when demand is highest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backToTopButton = document.getElementById('back-to-top');
+        const chatTrigger = document.getElementById('chat-trigger');
+        const chatWidget = document.getElementById('chat-widget');
+        const closeChat = document.getElementById('close-chat');
+        const sendMessage = document.getElementById('send-message');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        const animatedElements = document.querySelectorAll('.');
+
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                // Close other FAQs
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherContent = otherToggle.nextElementSibling;
+                        const otherIcon = otherToggle.querySelector('svg');
+                        
+                        if (!otherContent.classList.contains('hidden')) {
+                            otherContent.classList.add('hidden');
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Back to Top Button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+            
+            // Check for animated elements
+            animatedElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Chat Widget
+        chatTrigger.addEventListener('click', () => {
+            chatWidget.classList.toggle('opacity-0');
+            chatWidget.classList.toggle('invisible');
+            chatWidget.classList.toggle('-translate-y-4');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatWidget.classList.add('opacity-0', 'invisible', '-translate-y-4');
+        });
+
+        // Send Message Function
+        function sendChatMessage() {
+            const message = chatInput.value.trim();
+            
+            if (message !== '') {
+                // Add user message
+                const userMessageHTML = `
+                    <div class="flex justify-end mb-4">
+                        <div class="bg-safari-orange text-white p-3 rounded-lg rounded-tr-none">
+                            <p class="text-sm">${message}</p>
+                        </div>
+                    </div>
+                `;
+                chatMessages.insertAdjacentHTML('beforeend', userMessageHTML);
+                
+                // Clear input
+                chatInput.value = '';
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Simulate response (in a real app, this would be handled by a backend)
+                setTimeout(() => {
+                    const responseHTML = `
+                        <div class="flex mb-4">
+                            <div class="flex-shrink-0 h-8 w-8 bg-safari-orange rounded-full flex items-center justify-center text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                            </div>
+                            <div class="ml-3 bg-gray-100 p-3 rounded-lg rounded-tl-none">
+                                <p class="text-sm text-gray-800">Thanks for your message! Our team will get back to you shortly. For immediate assistance, please call us at +91 98765 43210.</p>
+                            </div>
+                        </div>
+                    `;
+                    chatMessages.insertAdjacentHTML('beforeend', responseHTML);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        sendMessage.addEventListener('click', sendChatMessage);
+        
+        chatInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Initialize animation on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.scrollBy(0, 1); // Trigger scroll event to check for visible elements
+            }, 100);
+        });
+    </script>
+</body>
+</html>

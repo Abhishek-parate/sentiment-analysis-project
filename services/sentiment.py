@@ -7,7 +7,7 @@ from config import Config
 class SentimentAnalyzer:
     def __init__(self):
         self.api_key = Config.GROQ_API_KEY
-        self.model = "llama3-8b-8192"  # Using Llama 3 model through Groq
+        self.model = "meta-llama/llama-4-scout-17b-16e-instruct"  # Using Llama 3 model through Groq
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
     
     def analyze(self, text):

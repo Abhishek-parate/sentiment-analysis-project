@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <h1 class="text-2xl font-bold mb-6">Simple Calculator</h1>
+        <div class="bg-white p-8 w-auto h-auto rounded-xl shadow-lg ">
+            <div>
+                <input type="text" class=" p-2 border border-gray-300 rounded-md mb-4 text-xl" id="display" >
+                <div class="grid grid-cols-4 gap-2 font-bold">
+                    <button class="border-1  border-gray-300 rounded-md shadow-lg w-14 h-14 hover:drop-shadow-xl bg-blue-500 text-white cursor-pointer" onclick="clearDisplay() ">AC</button>
+                    <button class="border-1  border-gray-300 rounded-md shadow-lg w-14 h-14 hover:drop-shadow-xl bg-red-500 text-white cursor-pointer" onclick="removeOne()">DEL</button>
+                    <button class="border-1  border-gray-300 rounded-md shadow-lg w-14 h-14 hover:drop-shadow-xl bg-blue-800 text-white cursor-pointer" onclick="appendValue('%')">%</button>
+                    <button class="rounded-md h-14 w-14  bg-blue-800 text-white hover:drop-shadow-xl " onclick="appendValue('/')">/</button>
+
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('7')">7</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('8')">8</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('9')">9</button>
+                    <button class="bg-blue-800 text-white rounded-md h-14 w-14 hover:drop-shadow-md   " onclick="appendValue('*')">X</button>
+
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('4')">4</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('5')">5</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('6')">6</button>
+                    <button class="bg-blue-800 text-white rounded-md h-14 w-14 hover:drop-shadow-md   " onclick="appendValue('-')">-</button>
+
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('1')">1</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('2')">2</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('3')">3</button>
+                    <button class="bg-blue-800 text-white rounded-md h-14 w-14 hover:drop-shadow-md   " onclick="appendValue('+')">+</button>
+
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('0')">0</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('.')">.</button>
+                    <button class="bg-gray-200 rounded-md h-14 w-14 hover:drop-shadow-md " onclick="appendValue('00')">00</button>
+                    <button class="bg-orange-500 text-white rounded-md h-14 w-14 hover:drop-shadow-md  hover:drop-shadow-xl " onclick="CalValue()">=</button>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const disp = document.getElementById('display'); //9*3=27
+        function appendValue(val) {
+        document.getElementById('display').value += val;
+    }
+
+    function CalValue(){
+        disp.value = eval(disp.value);
+        
+        document.getElementById('display').value = disp.value;
+
+        
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function removeOne() {
+        disp.value = disp.value.slice(0, -1);
+    }
+
+
+    disp.addEventListener('input', function (event) {
+    this.value = this.value.replace(/[^0-9./*-+]/g, ''); // Remove non-numeric and non-dot characters
+    
+    const parts = this.value.split('.');
+    if (parts.length > 2) {
+        this.value = parts[0] + '.' + parts.slice(1).join(''); // Keep only the first dot
+
+
+
+    }
+});
+
+
+    
+
+    </script>
+
+
+
+
+
+    
+    </div>
+
+</body>
+
+</html>
